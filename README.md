@@ -1,5 +1,4 @@
-```diff 
-[![SlamDevs](https://telegra.ph/file/143032e96542e7534f073.jpg)](https://t.me/SlamDevs)
+![SlamDevs](https://telegra.ph/file/143032e96542e7534f073.jpg)[SlamDevs](https://t.me/SlamDevs)
 
 
 **Slam Mirror Bot** is a _multipurpose_ Telegram Bot written in Python for mirroring files on the Internet to our beloved Google Drive. Based on [python-aria-mirror-bot](https://github.com/lzzy12/python-aria-mirror-bot)
@@ -82,9 +81,8 @@ For Debian based distros
 ```
 sudo apt install python3
 ```
-Install Docker by following the [official Docker docs](https://docs.docker.com/engine/install/debian/)
+Install Docker by following the
 
-OR
 ```
 sudo apt install snapd
 sudo snap install docker 
@@ -117,10 +115,7 @@ pip3 install -r requirements-cli.txt
 ```
 cp config_sample.env config.env
 ```
-- Remove the first line saying:
-```
-_____REMOVE_THIS_LINE_____=True
-```
+    
 Fill up rest of the fields. Meaning of each field is discussed below:
 ### Required Field
 - `BOT_TOKEN`: The Telegram Bot Token that you got from [@BotFather](https://t.me/BotFather)
@@ -181,9 +176,41 @@ Three buttons are already added including Drive Link, Index Link, and View Link,
 </details>
 
 ## Bot commands to be set in [@BotFather](https://t.me/BotFather)
-
-<p><a href="https://github.com/SlamDevs/slam-mirrorbot/wiki/Bot-commands-to-be-set-in-BotFather"> <img src="https://img.shields.io/badge/See%20On%20Wiki-grey?style=for-the-badge&logo=github" width="160""/></a></p>
-
+```
+mirror - Mirror 
+clone - Copy file/folder to Drive
+zipmirror - Mirror and upload as zip 
+unzipmirror - Mirror and extract files 
+qbmirror - Mirror torrent using qBittorrent 
+qbzipmirror - Mirror torrent and upload as zip using qb 
+qbunzipmirror - Mirror torrent and extract files using qb 
+leech - Leech 
+zipleech - Leech and upload as zip 
+unzipleech - Leech and extract files 
+qbleech - Leech torrent using qBittorrent 
+qbzipleech - Leech torrent and upload as zip using qb 
+qbunzipleech - Leech torrent and extract using qb  
+count - Count file/folder of Drive 
+watch - Mirror yt-dlp supported link 
+zipwatch - Mirror yt-dlp supported link as zip 
+leechwatch - Leech through yt-dlp supported link 
+leechzipwatch - Leech yt-dlp support link as zip 
+leechset - Leech settings 
+status - Get Mirror Status message 
+list - Search files in Drive 
+search - Search for torrents with API 
+cancel - Cancel a task 
+cancelall - Cancel all tasks 
+del - Delete file/folder from Drive 
+log - Get the Bot Log 
+shell - Run commands in Shell 
+restart - Restart the Bot 
+stats - Bot Usage Stats 
+speedtest - Speedtest on server
+ping - Ping the Bot 
+help - All cmds with description
+```
+    
 ## Getting Google OAuth API credential file
 - Visit the [Google Cloud Console](https://console.developers.google.com/apis/credentials)
 - Go to the OAuth Consent tab, fill it, and save.
@@ -199,7 +226,7 @@ pip install google-api-python-client google-auth-httplib2 google-auth-oauthlib
 python3 generate_drive_token.py
 ```
 
-## Deploying On VPS
+## Deploying
 
 - Build Docker image:
 ```
